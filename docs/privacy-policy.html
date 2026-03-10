@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Daily Expense Tracker</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #2e7d32;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        h2 {
+            color: #1b5e20;
+            font-size: 20px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+        h3 {
+            color: #333;
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        .highlight {
+            background: #e8f5e9;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid #2e7d32;
+        }
+        .contact {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Daily Expense Tracker &mdash; Last Updated: March 10, 2026</p>
+
+        <div class="highlight">
+            <strong>Summary:</strong> Daily Expense Tracker stores your financial data primarily on your device.
+            We only collect your email address for authentication. Cloud backup is optional and stored securely
+            in your own Google Drive account.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>a) Account Information</h3>
+        <ul>
+            <li><strong>Email address</strong> &mdash; Used for account creation and authentication via Firebase Authentication.</li>
+            <li><strong>Display name</strong> &mdash; Retrieved from Google Sign-In, displayed within the app.</li>
+        </ul>
+
+        <h3>b) Financial Data</h3>
+        <ul>
+            <li>Expenses, income, budgets, loans, bills, savings goals, and categories you create.</li>
+            <li>This data is stored <strong>locally on your device</strong> using an encrypted SQLite database.</li>
+            <li>This data is <strong>never sent to our servers</strong>.</li>
+        </ul>
+
+        <h3>c) Cloud Backup Data (Optional)</h3>
+        <ul>
+            <li>If you connect Google Drive, your financial data may be backed up to a <strong>hidden app-specific folder</strong> in your Google Drive.</li>
+            <li>This folder is only accessible by the Daily Expense Tracker app &mdash; not visible in your Google Drive.</li>
+            <li>You can delete this backup at any time from Settings.</li>
+        </ul>
+
+        <h3>d) Advertising Data</h3>
+        <ul>
+            <li>We use <strong>Google AdMob</strong> to display advertisements to free users.</li>
+            <li>AdMob may collect device identifiers, IP address, and usage data for ad personalization.</li>
+            <li>You can manage ad personalization in your device's Google Settings.</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        <ul>
+            <li><strong>Authentication:</strong> Your email is used solely to create and manage your account.</li>
+            <li><strong>App Functionality:</strong> Financial data is used to provide expense tracking, budgeting, and reporting features.</li>
+            <li><strong>Cloud Sync:</strong> If enabled, your data is backed up to your Google Drive for cross-device access.</li>
+            <li><strong>Advertisements:</strong> AdMob uses device data to serve relevant ads (free tier only).</li>
+        </ul>
+
+        <h2>3. Data Storage & Security</h2>
+        <ul>
+            <li>All financial data is stored <strong>locally on your device</strong> as the primary storage.</li>
+            <li>Cloud backups are stored in your <strong>personal Google Drive</strong> (appDataFolder), not on our servers.</li>
+            <li>Authentication is handled by <strong>Firebase Authentication</strong> (Google's secure infrastructure).</li>
+            <li>All network communication uses <strong>HTTPS encryption</strong>.</li>
+            <li>We do <strong>not</strong> operate any backend servers that store your data.</li>
+        </ul>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We use the following third-party services:</p>
+        <ul>
+            <li><strong>Firebase Authentication</strong> (Google) &mdash; For user account management. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Google Drive API</strong> (Google) &mdash; For optional cloud backup using the appDataFolder scope. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Google AdMob</strong> (Google) &mdash; For displaying advertisements. <a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a></li>
+        </ul>
+
+        <h2>5. Permissions</h2>
+        <ul>
+            <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, and advertisements.</li>
+            <li><strong>Camera</strong> &mdash; Used for capturing receipt photos (only when you choose to).</li>
+            <li><strong>Notifications</strong> &mdash; Used for bill payment reminders (optional).</li>
+            <li><strong>Storage</strong> &mdash; Used for local backup export/import.</li>
+        </ul>
+        <p>All permissions are requested only when needed and can be revoked in your device settings.</p>
+
+        <h2>6. Data Sharing</h2>
+        <div class="highlight">
+            <strong>We do NOT sell, trade, or share your personal or financial data with any third party.</strong>
+        </div>
+        <p>The only data shared with third parties is:</p>
+        <ul>
+            <li>Email address with Firebase (for authentication only).</li>
+            <li>Device identifiers with AdMob (for advertisement delivery).</li>
+        </ul>
+
+        <h2>7. Data Retention & Deletion</h2>
+        <ul>
+            <li>Your local data remains on your device until you uninstall the app or manually delete it.</li>
+            <li>Cloud backup data remains in your Google Drive until you delete it from the app or your Drive.</li>
+            <li>You can <strong>delete your account</strong> at any time from Settings &gt; Danger Zone &gt; Delete Account.</li>
+            <li>Account deletion permanently removes:
+                <ul>
+                    <li>Your Firebase Authentication account</li>
+                    <li>Your Google Drive backup data</li>
+                </ul>
+            </li>
+            <li>Local data on your device is <strong>not</strong> automatically deleted when you delete your account (you can uninstall the app to remove it).</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+        <p>Daily Expense Tracker is not directed at children under the age of 13. We do not knowingly collect
+        personal information from children under 13. If you believe we have collected such data, please
+        contact us so we can delete it.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an
+        updated "Last Updated" date. Continued use of the app after changes constitutes acceptance of the
+        updated policy.</p>
+
+        <h2>10. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your data (all data is visible within the app)</li>
+            <li>Export your data (via local backup or CSV/PDF export)</li>
+            <li>Delete your data (via account deletion or app uninstall)</li>
+            <li>Opt out of ad personalization (via Google device settings)</li>
+        </ul>
+
+        <h2>11. Contact Us</h2>
+        <div class="contact">
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> amjadalilashari158@gmail.com</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/Amjadalilashari" target="_blank">github.com/Amjadalilashari</a></li>
+                <li><strong>Play Store:</strong> Through the app's Play Store listing page</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Daily Expense Tracker. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
