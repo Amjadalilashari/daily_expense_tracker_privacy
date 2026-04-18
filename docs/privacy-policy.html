@@ -78,12 +78,12 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">SpendEasy &mdash; Last Updated: March 10, 2026</p>
+        <p class="subtitle">SpendEasy &mdash; Last Updated: April 18, 2026</p>
 
         <div class="highlight">
             <strong>Summary:</strong> SpendEasy stores your financial data primarily on your device.
             We only collect your email address for authentication. Cloud backup is optional and stored securely
-            in your own Google Drive account.
+            in your own Google Drive account. All spending analysis is performed locally &mdash; your financial data never leaves your device.
         </div>
 
         <h2>1. Information We Collect</h2>
@@ -96,7 +96,8 @@
 
         <h3>b) Financial Data</h3>
         <ul>
-            <li>Expenses, income, budgets, loans, bills, savings goals, and categories you create.</li>
+            <li>Expenses, income, budgets, loans, bills, savings goals, categories, bank accounts, and transfers you create.</li>
+            <li>Multi-account data including account names, types, balances, and currencies.</li>
             <li>This data is stored <strong>locally on your device</strong> using an encrypted SQLite database.</li>
             <li>This data is <strong>never sent to our servers</strong>.</li>
         </ul>
@@ -105,6 +106,7 @@
         <ul>
             <li>If you connect Google Drive, your financial data may be backed up to a <strong>hidden app-specific folder</strong> in your Google Drive.</li>
             <li>This folder is only accessible by the SpendEasy app &mdash; not visible in your Google Drive.</li>
+            <li>Backups are encrypted in transit using HTTPS.</li>
             <li>You can delete this backup at any time from Settings.</li>
         </ul>
 
@@ -115,11 +117,18 @@
             <li>You can manage ad personalization in your device's Google Settings.</li>
         </ul>
 
+        <h3>e) Locally Processed Data</h3>
+        <ul>
+            <li><strong>AI Spending Insights</strong> &mdash; All spending pattern analysis is performed entirely on your device using local algorithms. No financial data is sent to any AI service or external server.</li>
+            <li><strong>Financial Health Score</strong> &mdash; Calculated locally on your device from your expense, income, budget, and loan data.</li>
+        </ul>
+
         <h2>2. How We Use Your Information</h2>
         <ul>
             <li><strong>Authentication:</strong> Your email is used solely to create and manage your account.</li>
-            <li><strong>App Functionality:</strong> Financial data is used to provide expense tracking, budgeting, and reporting features.</li>
+            <li><strong>App Functionality:</strong> Financial data is used to provide expense tracking, multi-account management, budgeting, analytics, and reporting features.</li>
             <li><strong>Cloud Sync:</strong> If enabled, your data is backed up to your Google Drive for cross-device access.</li>
+            <li><strong>Currency Conversion:</strong> When using the currency converter or multi-currency accounts, only currency codes (e.g., "USD", "PKR") are sent to the exchange rate API &mdash; no personal or financial data is transmitted.</li>
             <li><strong>Advertisements:</strong> AdMob uses device data to serve relevant ads (free tier only).</li>
         </ul>
 
@@ -129,23 +138,27 @@
             <li>Cloud backups are stored in your <strong>personal Google Drive</strong> (appDataFolder), not on our servers.</li>
             <li>Authentication is handled by <strong>Firebase Authentication</strong> (Google's secure infrastructure).</li>
             <li>All network communication uses <strong>HTTPS encryption</strong>.</li>
+            <li>App lock with <strong>PIN and biometric authentication</strong> is available to protect your data.</li>
             <li>We do <strong>not</strong> operate any backend servers that store your data.</li>
         </ul>
 
         <h2>4. Third-Party Services</h2>
         <p>We use the following third-party services:</p>
         <ul>
-            <li><strong>Firebase Authentication</strong> (Google) &mdash; For user account management. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Firebase Authentication</strong> (Google) &mdash; For user account management and security. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
             <li><strong>Google Drive API</strong> (Google) &mdash; For optional cloud backup using the appDataFolder scope. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-            <li><strong>Google AdMob</strong> (Google) &mdash; For displaying advertisements. <a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a></li>
+            <li><strong>Google AdMob</strong> (Google) &mdash; For displaying advertisements to free users. <a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a></li>
+            <li><strong>Exchange Rate API</strong> (open.er-api.com) &mdash; For fetching real-time currency exchange rates. Only currency codes are sent (e.g., "USD"). No personal, financial, or device data is transmitted. <a href="https://www.exchangerate-api.com/docs/privacy-policy" target="_blank">Privacy Policy</a></li>
         </ul>
 
         <h2>5. Permissions</h2>
         <ul>
-            <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, and advertisements.</li>
+            <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, currency exchange rates, and advertisements.</li>
             <li><strong>Camera</strong> &mdash; Used for capturing receipt photos (only when you choose to).</li>
-            <li><strong>Notifications</strong> &mdash; Used for bill payment reminders (optional).</li>
-            <li><strong>Storage</strong> &mdash; Used for local backup export/import.</li>
+            <li><strong>Notifications</strong> &mdash; Used for bill payment reminders and monthly financial summaries (optional).</li>
+            <li><strong>Biometric</strong> &mdash; Used for app lock with fingerprint or face authentication (optional).</li>
+            <li><strong>Storage</strong> &mdash; Used for local backup export/import and receipt photo storage.</li>
+            <li><strong>AD_ID</strong> &mdash; Used by Google AdMob for ad personalization (Android 13+).</li>
         </ul>
         <p>All permissions are requested only when needed and can be revoked in your device settings.</p>
 
@@ -157,12 +170,14 @@
         <ul>
             <li>Email address with Firebase (for authentication only).</li>
             <li>Device identifiers with AdMob (for advertisement delivery).</li>
+            <li>Currency codes with Exchange Rate API (for conversion rates &mdash; no personal data).</li>
         </ul>
 
         <h2>7. Data Retention & Deletion</h2>
         <ul>
             <li>Your local data remains on your device until you uninstall the app or manually delete it.</li>
             <li>Cloud backup data remains in your Google Drive until you delete it from the app or your Drive.</li>
+            <li>Soft-deleted records are permanently removed after 90 days.</li>
             <li>You can <strong>delete your account</strong> at any time from Settings &gt; Danger Zone &gt; Delete Account.</li>
             <li>Account deletion permanently removes:
                 <ul>
@@ -187,9 +202,11 @@
         <p>You have the right to:</p>
         <ul>
             <li>Access your data (all data is visible within the app)</li>
-            <li>Export your data (via local backup or CSV/PDF export)</li>
+            <li>Export your data (via local backup, CSV, or PDF export)</li>
             <li>Delete your data (via account deletion or app uninstall)</li>
+            <li>Manage your accounts and financial records at any time</li>
             <li>Opt out of ad personalization (via Google device settings)</li>
+            <li>Disable cloud backup at any time (data stays local only)</li>
         </ul>
 
         <h2>11. Contact Us</h2>
@@ -197,7 +214,7 @@
             <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
             <ul>
                 <li><strong>Email:</strong> support@mybytenest.com</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/Amjadalilashari" target="_blank">github.com/Amjadalilashari</a></li>
+                <li><strong>Website:</strong> <a href="https://mybytenest.com" target="_blank">mybytenest.com</a></li>
                 <li><strong>Play Store:</strong> Through the app's Play Store listing page</li>
             </ul>
         </div>
