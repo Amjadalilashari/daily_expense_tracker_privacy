@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">SpendEasy &mdash; Last Updated: April 22, 2026</p>
+        <p class="subtitle">SpendEasy &mdash; Last Updated: April 23, 2026</p>
 
         <div class="highlight">
             <strong>Summary:</strong> SpendEasy stores your financial data primarily on your device.
@@ -100,6 +100,8 @@
             <li>Recurring expenses and subscriptions you schedule (including optional "subscription" flag for services like Netflix/Spotify).</li>
             <li>Multi-account data including account names, types, balances, and currencies.</li>
             <li>Optional receipt photos you attach to expenses &mdash; stored as local files on your device only.</li>
+            <li><strong>Physical assets</strong> you choose to track (gold, silver, real estate, stocks, and other) with quantity, unit, purity, purchase price, and optional current market value &mdash; stored locally.</li>
+            <li><strong>Zakat settings</strong> such as your chosen Nisab method (gold / silver / lower), the gold and silver spot prices you enter, and an optional personal Zakat anniversary date &mdash; stored locally.</li>
             <li>This data is stored <strong>locally on your device</strong> using an encrypted SQLite database.</li>
             <li>This data is <strong>never sent to our servers</strong>.</li>
         </ul>
@@ -125,6 +127,9 @@
             <li><strong>Financial Health Score</strong> &mdash; Calculated locally on your device from your expense, income, budget, and loan data.</li>
             <li><strong>Subscription annualised cost</strong> &mdash; Computed on-device by summing active subscriptions; no data leaves the device.</li>
             <li><strong>Offline currency conversion</strong> &mdash; If your device has no internet and no cached live rates (e.g. on first launch), SpendEasy falls back to a bundled exchange-rate snapshot included in the app package. These rates are static reference data, not derived from any user input or transmission.</li>
+            <li><strong>Zakat calculation</strong> &mdash; Computed entirely on-device from your own liquid cash, savings, physical assets, and loans. The app multiplies your Zakatable wealth by 2.5% when it exceeds the Nisab threshold. No financial data is transmitted to any server or religious authority; the result is a personal estimate, not a fatwa.</li>
+            <li><strong>Financial Calendar</strong> &mdash; Read-only overlay of your own bills, subscription renewals, recurring income/expenses, and savings goal deadlines. No data is transmitted; it reads only from your local database.</li>
+            <li><strong>Duplicate-expense warning</strong> &mdash; When you enter a new expense, SpendEasy checks your last few recent expenses locally and warns you if it looks like a duplicate entry (same amount, category and account within 10 minutes). This check is entirely on-device; no data is sent anywhere.</li>
             <li><strong>Theme preference and accent color</strong> &mdash; Stored locally as a device setting only.</li>
         </ul>
 
@@ -161,6 +166,7 @@
             <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, currency exchange rates, and advertisements.</li>
             <li><strong>Camera</strong> &mdash; Used for capturing receipt photos (only when you choose to).</li>
             <li><strong>Notifications</strong> &mdash; Used for bill payment reminders and monthly financial summaries (optional).</li>
+            <li><strong>Exact Alarms</strong> &mdash; Used to deliver bill-due and daily-summary notifications at the exact time you scheduled them. Not used for any other purpose.</li>
             <li><strong>Biometric</strong> &mdash; Used for app lock with fingerprint or face authentication (optional).</li>
             <li><strong>Storage</strong> &mdash; Used for local backup export/import, CSV export files, and receipt photo storage.</li>
             <li><strong>AD_ID</strong> &mdash; Used by Google AdMob for ad personalization (Android 13+).</li>
