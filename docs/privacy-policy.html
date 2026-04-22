@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">SpendEasy &mdash; Last Updated: April 18, 2026</p>
+        <p class="subtitle">SpendEasy &mdash; Last Updated: April 22, 2026</p>
 
         <div class="highlight">
             <strong>Summary:</strong> SpendEasy stores your financial data primarily on your device.
@@ -97,7 +97,9 @@
         <h3>b) Financial Data</h3>
         <ul>
             <li>Expenses, income, budgets, loans, bills, savings goals, categories, bank accounts, and transfers you create.</li>
+            <li>Recurring expenses and subscriptions you schedule (including optional "subscription" flag for services like Netflix/Spotify).</li>
             <li>Multi-account data including account names, types, balances, and currencies.</li>
+            <li>Optional receipt photos you attach to expenses &mdash; stored as local files on your device only.</li>
             <li>This data is stored <strong>locally on your device</strong> using an encrypted SQLite database.</li>
             <li>This data is <strong>never sent to our servers</strong>.</li>
         </ul>
@@ -121,6 +123,9 @@
         <ul>
             <li><strong>AI Spending Insights</strong> &mdash; All spending pattern analysis is performed entirely on your device using local algorithms. No financial data is sent to any AI service or external server.</li>
             <li><strong>Financial Health Score</strong> &mdash; Calculated locally on your device from your expense, income, budget, and loan data.</li>
+            <li><strong>Subscription annualised cost</strong> &mdash; Computed on-device by summing active subscriptions; no data leaves the device.</li>
+            <li><strong>Offline currency conversion</strong> &mdash; If your device has no internet and no cached live rates (e.g. on first launch), SpendEasy falls back to a bundled exchange-rate snapshot included in the app package. These rates are static reference data, not derived from any user input or transmission.</li>
+            <li><strong>Theme preference and accent color</strong> &mdash; Stored locally as a device setting only.</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
@@ -128,7 +133,7 @@
             <li><strong>Authentication:</strong> Your email is used solely to create and manage your account.</li>
             <li><strong>App Functionality:</strong> Financial data is used to provide expense tracking, multi-account management, budgeting, analytics, and reporting features.</li>
             <li><strong>Cloud Sync:</strong> If enabled, your data is backed up to your Google Drive for cross-device access.</li>
-            <li><strong>Currency Conversion:</strong> When using the currency converter or multi-currency accounts, only currency codes (e.g., "USD", "PKR") are sent to the exchange rate API &mdash; no personal or financial data is transmitted.</li>
+            <li><strong>Currency Conversion:</strong> When using the currency converter or multi-currency accounts, only currency codes (e.g., "USD", "PKR") are sent to the exchange rate API &mdash; no personal or financial data is transmitted. If your device is offline and no cached rate is available, SpendEasy falls back to a bundled snapshot of rates shipped with the app; no network call is made in that case.</li>
             <li><strong>Advertisements:</strong> AdMob uses device data to serve relevant ads (free tier only).</li>
         </ul>
 
@@ -157,10 +162,27 @@
             <li><strong>Camera</strong> &mdash; Used for capturing receipt photos (only when you choose to).</li>
             <li><strong>Notifications</strong> &mdash; Used for bill payment reminders and monthly financial summaries (optional).</li>
             <li><strong>Biometric</strong> &mdash; Used for app lock with fingerprint or face authentication (optional).</li>
-            <li><strong>Storage</strong> &mdash; Used for local backup export/import and receipt photo storage.</li>
+            <li><strong>Storage</strong> &mdash; Used for local backup export/import, CSV export files, and receipt photo storage.</li>
             <li><strong>AD_ID</strong> &mdash; Used by Google AdMob for ad personalization (Android 13+).</li>
         </ul>
         <p>All permissions are requested only when needed and can be revoked in your device settings.</p>
+
+        <h3>Home Screen Widget and Launcher Shortcuts</h3>
+        <p>SpendEasy offers an optional Android home-screen widget that displays your current month's spending and income totals, plus a one-tap "Add Expense" button. It also registers long-press app-icon shortcuts (Add Expense, Add Income, Add Bill). These features:</p>
+        <ul>
+            <li>Display or act on the same on-device data already used inside the app.</li>
+            <li>Do <strong>not</strong> transmit any data off-device.</li>
+            <li>Do <strong>not</strong> require any additional permissions.</li>
+        </ul>
+
+        <h3>Data Export (CSV / PDF / JSON)</h3>
+        <p>You can export your financial data at any time from Settings:</p>
+        <ul>
+            <li><strong>CSV export</strong> for Excel, Google Sheets, or tax-preparation software.</li>
+            <li><strong>PDF reports</strong> for printing or sharing.</li>
+            <li><strong>JSON backup</strong> for migrating data to a new device.</li>
+        </ul>
+        <p>Exports are written to a temporary folder on your device and handed to your system share sheet. SpendEasy does <strong>not</strong> upload these files anywhere &mdash; where they go next is entirely your choice (save locally, email yourself, send to your accountant, etc.).</p>
 
         <h2>6. Data Sharing</h2>
         <div class="highlight">
