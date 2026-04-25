@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">SpendEasy &mdash; Last Updated: April 23, 2026</p>
+        <p class="subtitle">SpendEasy &mdash; Last Updated: April 25, 2026</p>
 
         <div class="highlight">
             <strong>Summary:</strong> SpendEasy stores your financial data primarily on your device.
@@ -159,11 +159,13 @@
             <li><strong>Google Drive API</strong> (Google) &mdash; For optional cloud backup using the appDataFolder scope. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
             <li><strong>Google AdMob</strong> (Google) &mdash; For displaying advertisements to free users. <a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a></li>
             <li><strong>Exchange Rate API</strong> (open.er-api.com) &mdash; For fetching real-time currency exchange rates. Only currency codes are sent (e.g., "USD"). No personal, financial, or device data is transmitted. <a href="https://www.exchangerate-api.com/docs/privacy-policy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Historical Currency API</strong> (cdn.jsdelivr.net hosting fawazahmed0/exchange-api) &mdash; For fetching historical exchange-rate trends shown on the Charts screen. Only currency codes and dates are sent. No personal, financial, or device data is transmitted.</li>
+            <li><strong>Gold &amp; Silver Spot Price APIs</strong> (gold-api.com and CoinGecko) &mdash; For fetching live spot prices used in Net Worth, Assets, and Zakat calculations. Only the metal symbol (e.g., "XAU" for gold, "XAG" for silver) or token IDs (e.g., "pax-gold") are sent. No personal, financial, or device data is transmitted. CoinGecko is used as a regional fallback when gold-api.com is unreachable.</li>
         </ul>
 
         <h2>5. Permissions</h2>
         <ul>
-            <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, currency exchange rates, and advertisements.</li>
+            <li><strong>Internet</strong> &mdash; Required for authentication, cloud backup, currency exchange rates, gold/silver spot prices, and advertisements.</li>
             <li><strong>Camera</strong> &mdash; Used for capturing receipt photos (only when you choose to).</li>
             <li><strong>Notifications</strong> &mdash; Used for bill payment reminders and monthly financial summaries (optional).</li>
             <li><strong>Biometric</strong> &mdash; Used for app lock with fingerprint or face authentication (optional).</li>
