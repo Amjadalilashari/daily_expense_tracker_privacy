@@ -78,7 +78,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">SpendEasy &mdash; Last Updated: April 25, 2026 (v1.0.15)</p>
+        <p class="subtitle">SpendEasy &mdash; Last Updated: May 1, 2026 (v1.0.18)</p>
 
         <div class="highlight">
             <strong>Summary:</strong> SpendEasy stores your financial data primarily on your device.
@@ -137,6 +137,28 @@
             <li>Firebase may log basic request metadata (timestamp, app version, anonymised installation identifier) on its servers in the normal course of serving the configuration. This is governed by Google's privacy policy.</li>
         </ul>
 
+        <h3>h) In-App Purchases &amp; Subscriptions</h3>
+        <ul>
+            <li>SpendEasy offers an optional <strong>SpendEasy Premium</strong> subscription (monthly or yearly) processed by <strong>Google Play Billing</strong>.</li>
+            <li>All payment, card, billing-address, and tax data is handled by <strong>Google</strong>, not by SpendEasy. We never see, receive, or store your card number, CVV, billing address, or charge history.</li>
+            <li>The only thing the app receives from Google Play Billing is an <strong>entitlement signal</strong> (premium / not premium) plus an opaque purchase token used to verify ongoing subscription validity. We use this to unlock premium features in the app.</li>
+            <li>If you redeem a promo code, the redemption happens in Google Play; SpendEasy is told only that an entitlement now exists.</li>
+            <li>Subscription cancellation, refunds, and payment-method changes are handled entirely through your Google Play account at <code>play.google.com/store/account/subscriptions</code>.</li>
+        </ul>
+
+        <h3>i) On-Device Receipt OCR</h3>
+        <ul>
+            <li>Premium subscribers can scan a receipt photo to automatically pre-fill the expense amount, date, and merchant. This is powered by <strong>Google ML Kit Text Recognition</strong>, which runs <strong>entirely on your device</strong>.</li>
+            <li>The receipt image is processed locally. Neither the photo nor the recognised text leaves your device. There is no network call, no server, and no third-party API involved in the OCR step.</li>
+            <li>Recognised text is shown to you for editing in the standard Add Expense form before anything is saved. Nothing is auto-saved without your confirmation.</li>
+        </ul>
+
+        <h3>j) Year-End Summary (Wrapped) &amp; Cashflow Forecast</h3>
+        <ul>
+            <li>The premium <strong>Year-end summary</strong> and <strong>Cashflow forecast</strong> features are computed entirely on-device from your existing local data. No financial information is uploaded for this analysis.</li>
+            <li>If you choose to share your year-end card via Android's share sheet, you control where it goes (Instagram, WhatsApp, email, etc.). SpendEasy does not upload the card anywhere automatically.</li>
+        </ul>
+
         <h3>e) Locally Processed Data</h3>
         <ul>
             <li><strong>AI Spending Insights</strong> &mdash; All spending pattern analysis is performed entirely on your device using local algorithms. No financial data is sent to any AI service or external server.</li>
@@ -174,6 +196,8 @@
             <li><strong>Firebase Authentication</strong> (Google) &mdash; For user account management and security. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
             <li><strong>Firebase Crashlytics</strong> (Google) &mdash; For crash reporting in release builds. Sends stack traces and device metadata only; never financial data. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
             <li><strong>Firebase Remote Config</strong> (Google) &mdash; For feature flags and emergency kill-switches. App receives configuration only; no personal data is uploaded. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Google Play Billing</strong> (Google) &mdash; For processing optional Premium subscription purchases. SpendEasy receives only an entitlement signal; payment details stay with Google. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+            <li><strong>Google ML Kit Text Recognition</strong> (Google) &mdash; On-device only. Used for receipt OCR. No data leaves the device. <a href="https://developers.google.com/ml-kit/terms" target="_blank">ML Kit Terms</a></li>
             <li><strong>Google Drive API</strong> (Google) &mdash; For optional cloud backup using the appDataFolder scope. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
             <li><strong>Google AdMob</strong> (Google) &mdash; For displaying advertisements to free users. <a href="https://policies.google.com/technologies/ads" target="_blank">Ad Policy</a></li>
             <li><strong>Exchange Rate API</strong> (open.er-api.com) &mdash; For fetching real-time currency exchange rates. Only currency codes are sent (e.g., "USD"). No personal, financial, or device data is transmitted. <a href="https://www.exchangerate-api.com/docs/privacy-policy" target="_blank">Privacy Policy</a></li>
